@@ -10,277 +10,118 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./css/style.css" />
+        <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+
+        <style>
+            body {
+                margin: 0;
+            }
+            .container {
+                max-width: 1240px;
+                margin: 0 auto;
+                padding: 0 15px;
+                height: 100%;
+            }
+            .header {
+                width: 100%;
+                position: absolute;
+                padding: 15px 0;
+            }
+
+            .header__content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .header-logo {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .hero {
+                background: url(https://images.pexels.com/photos/14373465/pexels-photo-14373465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+                    center / cover;
+                height: 750px;
+            }
+
+            .hero__content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 100%;
+            }
+            .hero-title {
+                color: #fff;
+                font-size: 52px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .hero-text {
+                color: #f7f3f2;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 24.5px;
+            }
+
+            @media screen and (max-width: 450px) {
+                .hero {
+                    height: 600px;
+                }
+                .header-logo {
+                    display: none;
+                }
+                .header__content {
+                    justify-content: center;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="wrap">
+            <header class="header">
+                <div class="container">
+                    <div class="header__content">
+                        <a href="#" class="header-logo"> DREAMSHARE </a>
+                        <div class="header__btns">
+                            <button class="header-login">Log in</button>
+                            <button class="header-signup">Sign up</button>
+                        </div>
+                        <img src="./images/clock.svg" alt="" />
+                    </div>
+                </div>
+            </header>
             <section class="hero">
                 <div class="container">
-                    <header class="header">
-                        <a href="#" class="logo">Landing</a>
-
-                        <nav class="nav">
-                            <a href="#" class="nav-link">PRODUCTS</a>
-                            <a href="#" class="nav-link">MENU</a>
-                            <a href="#" class="nav-link">ABOUT</a>
-                            <a href="#" class="nav-link">BLOG</a>
-                            <a href="#" class="nav-link">CONTACT</a>
-                        </nav>
-                        <img src="./images/search.svg" alt="" />
-                    </header>
-
-                    <div class="hero-info">
-                        <h3 class="hero-pretitle">THE MONSTER DNA PRO 2.0</h3>
-                        <h1 class="hero-title">TOP THREE FAMOUS BOHEMIAN</h1>
-                        <button class="btn">LEARN MORE</button>
+                    <div class="hero__content">
+                        <h1 class="hero-title">
+                            SHARE YOUR <br />
+                            HOLIDAY DREAM
+                        </h1>
+                        <p class="hero-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Beatae, autem.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <section class="popular">
+            <!-- <section class="partners">
                 <div class="container">
-                    <div class="popular__header">
-                        <button class="popular__header-btn">
-                            <img src="./images/sort.svg" alt="" />
-                            <span>SHUFFLE</span>
-                        </button>
+                    <h2 class="partners-title"></h2>
 
-                        <h2 class="popular-title">Popular</h2>
-                    </div>
-                    <ul class="popular__cards">
-                        <li class="popular__card">
-                            <div class="popular__card-img-wrap">
-                                <img
-                                    src="https://s3-alpha-sig.figma.com/img/8218/ee0d/6b8de18453b88a3bba7006cd9051359b?Expires=1698019200&Signature=q-QQ6xpHg3d76yCZLjzGZSf3TlMZQ~gJl-McuRF7Jo8gjv6ZprW5uVmgIIwsfyC3HBgS4CkbmuZq5iQqVNa2lZKdl3wZTTzEf4M5Ss4Yauc-QNrdcjAEidlqQx9YUSG3nRwwtHL97D3y0MSglMaZ9SSSlzCemDZIMsOAkN3Wt5qYArbLlU12NBthQp7Vhn-VDceVmfshxk2G8BMrMD9myQ1dsDlqCHng-wZBLqmSCecMTuESB4fFFEEozh8FoTZoa3LI0K2K0SLDOJLbMRenHzIhiuP8U3jtOVWllcpYs0JaqPDu7FS3lx~fHnCNDqmArViMkSLeX7Fte5kY6i~8Dw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="popular__card__info">
-                                <h3 class="popular__card-title">
-                                    The number of protons
-                                </h3>
-                                <p class="popular__card-text">
-                                    Apple Inc has decided to launch the much
-                                    awaited Apple Watch in the upcoming month of
-                                    April.
-                                </p>
-                                <div class="popular__card__bottom">
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/clock.svg" alt="" />
-                                        <span>1 JUNE 2015</span>
-                                    </div>
+                    <ul class="partners__list">
+                        <li class="partners__item">
+                            <img src="" class="partners__item-img" alt="">
 
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/view.svg" alt="" />
-                                        <span>343</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="popular__card">
-                            <div class="popular__card-img-wrap">
-                                <img
-                                    src="https://s3-alpha-sig.figma.com/img/8218/ee0d/6b8de18453b88a3bba7006cd9051359b?Expires=1698019200&Signature=q-QQ6xpHg3d76yCZLjzGZSf3TlMZQ~gJl-McuRF7Jo8gjv6ZprW5uVmgIIwsfyC3HBgS4CkbmuZq5iQqVNa2lZKdl3wZTTzEf4M5Ss4Yauc-QNrdcjAEidlqQx9YUSG3nRwwtHL97D3y0MSglMaZ9SSSlzCemDZIMsOAkN3Wt5qYArbLlU12NBthQp7Vhn-VDceVmfshxk2G8BMrMD9myQ1dsDlqCHng-wZBLqmSCecMTuESB4fFFEEozh8FoTZoa3LI0K2K0SLDOJLbMRenHzIhiuP8U3jtOVWllcpYs0JaqPDu7FS3lx~fHnCNDqmArViMkSLeX7Fte5kY6i~8Dw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="popular__card__info">
-                                <h3 class="popular__card-title">
-                                    The number of protons
-                                </h3>
-                                <p class="popular__card-text">
-                                    Apple Inc has decided to launch the much
-                                    awaited Apple Watch in the upcoming month of
-                                    April.
-                                </p>
-                                <div class="popular__card__bottom">
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/clock.svg" alt="" />
-                                        <span>1 JUNE 2015</span>
-                                    </div>
-
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/view.svg" alt="" />
-                                        <span>343</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="popular__card">
-                            <div class="popular__card-img-wrap">
-                                <img
-                                    src="https://s3-alpha-sig.figma.com/img/8218/ee0d/6b8de18453b88a3bba7006cd9051359b?Expires=1698019200&Signature=q-QQ6xpHg3d76yCZLjzGZSf3TlMZQ~gJl-McuRF7Jo8gjv6ZprW5uVmgIIwsfyC3HBgS4CkbmuZq5iQqVNa2lZKdl3wZTTzEf4M5Ss4Yauc-QNrdcjAEidlqQx9YUSG3nRwwtHL97D3y0MSglMaZ9SSSlzCemDZIMsOAkN3Wt5qYArbLlU12NBthQp7Vhn-VDceVmfshxk2G8BMrMD9myQ1dsDlqCHng-wZBLqmSCecMTuESB4fFFEEozh8FoTZoa3LI0K2K0SLDOJLbMRenHzIhiuP8U3jtOVWllcpYs0JaqPDu7FS3lx~fHnCNDqmArViMkSLeX7Fte5kY6i~8Dw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="popular__card__info">
-                                <h3 class="popular__card-title">
-                                    The number of protons
-                                </h3>
-                                <p class="popular__card-text">
-                                    Apple Inc has decided to launch the much
-                                    awaited Apple Watch in the upcoming month of
-                                    April.
-                                </p>
-                                <div class="popular__card__bottom">
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/clock.svg" alt="" />
-                                        <span>1 JUNE 2015</span>
-                                    </div>
-
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/view.svg" alt="" />
-                                        <span>343</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="popular__card">
-                            <div class="popular__card-img-wrap">
-                                <img
-                                    src="https://s3-alpha-sig.figma.com/img/8218/ee0d/6b8de18453b88a3bba7006cd9051359b?Expires=1698019200&Signature=q-QQ6xpHg3d76yCZLjzGZSf3TlMZQ~gJl-McuRF7Jo8gjv6ZprW5uVmgIIwsfyC3HBgS4CkbmuZq5iQqVNa2lZKdl3wZTTzEf4M5Ss4Yauc-QNrdcjAEidlqQx9YUSG3nRwwtHL97D3y0MSglMaZ9SSSlzCemDZIMsOAkN3Wt5qYArbLlU12NBthQp7Vhn-VDceVmfshxk2G8BMrMD9myQ1dsDlqCHng-wZBLqmSCecMTuESB4fFFEEozh8FoTZoa3LI0K2K0SLDOJLbMRenHzIhiuP8U3jtOVWllcpYs0JaqPDu7FS3lx~fHnCNDqmArViMkSLeX7Fte5kY6i~8Dw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="popular__card__info">
-                                <h3 class="popular__card-title">
-                                    The number of protons
-                                </h3>
-                                <p class="popular__card-text">
-                                    Apple Inc has decided to launch the much
-                                    awaited Apple Watch in the upcoming month of
-                                    April.
-                                </p>
-                                <div class="popular__card__bottom">
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/clock.svg" alt="" />
-                                        <span>1 JUNE 2015</span>
-                                    </div>
-
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/view.svg" alt="" />
-                                        <span>343</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="popular__card big-card">
-                            <div class="popular__card-img-wrap">
-                                <img
-                                    src="https://s3-alpha-sig.figma.com/img/8218/ee0d/6b8de18453b88a3bba7006cd9051359b?Expires=1698019200&Signature=q-QQ6xpHg3d76yCZLjzGZSf3TlMZQ~gJl-McuRF7Jo8gjv6ZprW5uVmgIIwsfyC3HBgS4CkbmuZq5iQqVNa2lZKdl3wZTTzEf4M5Ss4Yauc-QNrdcjAEidlqQx9YUSG3nRwwtHL97D3y0MSglMaZ9SSSlzCemDZIMsOAkN3Wt5qYArbLlU12NBthQp7Vhn-VDceVmfshxk2G8BMrMD9myQ1dsDlqCHng-wZBLqmSCecMTuESB4fFFEEozh8FoTZoa3LI0K2K0SLDOJLbMRenHzIhiuP8U3jtOVWllcpYs0JaqPDu7FS3lx~fHnCNDqmArViMkSLeX7Fte5kY6i~8Dw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                                    alt=""
-                                />
-                            </div>
-                            <div class="popular__card__info">
-                                <h3 class="popular__card-title">
-                                    The number of protons
-                                </h3>
-                                <p class="popular__card-text">
-                                    Apple Inc has decided to launch the much
-                                    awaited Apple Watch in the upcoming month of
-                                    April.
-                                </p>
-                                <div class="popular__card__bottom">
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/clock.svg" alt="" />
-                                        <span>1 JUNE 2015</span>
-                                    </div>
-
-                                    <div class="popular__card__bottom__icon">
-                                        <img src="./images/view.svg" alt="" />
-                                        <span>343</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <h5 class="partners__item-title"></h5>
                         </li>
                     </ul>
                 </div>
-            </section>
-
-            <footer class="footer">
-                <div class="container">
-                    <ul class="footer__blocks">
-                        <li class="footer__block">
-                            <h4 class="footer__block-title">PRODUCT</h4>
-
-                            <nav class="footer__block__nav">
-                                <a href="#" class="footer__block__nav-link"
-                                    >Popular Trending
-                                </a>
-                                <a href="#" class="footer__block__nav-link"
-                                    >Catalog Features
-                                </a>
-                            </nav>
-                        </li>
-                        <li class="footer__block">
-                            <h4 class="footer__block-title">PRODUCT</h4>
-
-                            <nav class="footer__block__nav">
-                                <a href="#" class="footer__block__nav-link"
-                                    >Popular Trending
-                                </a>
-                                <a href="#" class="footer__block__nav-link"
-                                    >Catalog Features
-                                </a>
-                            </nav>
-                        </li>
-                        <li class="footer__block">
-                            <h4 class="footer__block-title">PRODUCT</h4>
-
-                            <nav class="footer__block__nav">
-                                <a href="#" class="footer__block__nav-link"
-                                    >Popular Trending
-                                </a>
-                                <a href="#" class="footer__block__nav-link"
-                                    >Catalog Features
-                                </a>
-                            </nav>
-                        </li>
-                        <li class="footer__block">
-                            <h4 class="footer__block-title">PRODUCT</h4>
-
-                            <nav class="footer__block__social">
-                                <a href="#" class="footer__block__social-link">
-                                    <img src="./images/facebook.svg" alt="" />
-                                </a>
-                                <a href="#" class="footer__block__social-link">
-                                    <img src="./images/twitter.svg" alt="" />
-                                </a>
-                                <a href="#" class="footer__block__social-link">
-                                    <img src="./images/linked.svg" alt="" />
-                                </a>
-                                <a href="#" class="footer__block__social-link">
-                                    <img src="./images/pinterest.svg" alt="" />
-                                </a>
-                            </nav>
-                        </li>
-                    </ul>
-                </div>
-                <hr />
-                <div class="container">
-                    <div class="footer__bottom">
-                        <a href="#" class="logo">Landing</a>
-
-                        <nav class="footer__bottom__nav">
-                            <a href="#" class="footer__bottom__nav-link"
-                                >PRIVATE POLICY</a
-                            >
-                            <a href="#" class="footer__bottom__nav-link"
-                                >PRIVATE POLICY</a
-                            >
-                            <a href="#" class="footer__bottom__nav-link"
-                                >PRIVATE POLICY</a
-                            >
-                        </nav>
-                    </div>
-                </div>
-                <div class="footer__end">
-                    <span>© 2016 Landing. All rights reserved.</span>
-                </div>
-            </footer>
+            </section> -->
         </div>
-
-        <h1>hello</h1>
-        <h1>hello</h1>
     </body>
 </html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            body {
+                margin: 0;
+            }
+
+            .container {
+                max-width: 940px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+            .header {
+                padding: 15px 0px;
+                position: absolute;
+                top: 0;
+                /* width: 100%; */
+            }
+            .header__content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hero {
+                background: url(https://images.pexels.com/photos/1058283/pexels-photo-1058283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+                    center / cover;
+                height: 750px;
+            }
+
+            .partners__list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 400px;
+                gap: 20px;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            .partners__item {
+                position: relative;
+            }
+
+            .partners__item-wrap {
+                height: 100%;
+            }
+            .partners__item-wrap img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .partners__item__info {
+                position: absolute;
+                bottom: 0;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .partners__item-title,
+            .partners__item-text {
+                color: #fff;
+            }
+
+            @media screen and (max-width: 450px) {
+                .partners__list {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="partners">
+            <div class="partners__image">
+                <img
+                    src="https://s3-alpha-sig.figma.com/img/14d1/2934/98018aa4d1e5f3f7aa81e2c56333e6d2?Expires=1698019200&Signature=maSzAGrKZW12Vy3f3ayaUh2B05voMnEj3r7mAxou3IjHSde4zBs2ElkrDQUT2v3lYcimuASHq72CBqtufntkYD4yQd0kg~l3~N5r5ApK9X182RKZnDYpkwScbQWLH1RhMcf7gQ-Bk0EchbQ0ZdxX3pX4SJgyKbCRc-VY2jnxA~~vtKLfx4O8cEyJUEBUMS63RkJJUav2dN97x0X-ikI0euG9BB1Q4QRZNS1URgSSLzYY75M~ljGcSEodzx4K3012PaJEceU3esn1ZIvjvYAJTiVLchxfUHnhwrPiIP9ZQZmzWcsAG6r6mAsc~j7ynIGX4IcHYs5~Vo-X~FiXdKYd7w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt=""
+                />
+
+                <div class="partners__image__info">
+                    <h4 class="image-title">title</h4>
+                    <p class="image-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Alias est, tempore eveniet consequatur animi mollitia
+                        harum repellendus omnis in temporibus.
+                    </p>
+                </div>
+            </div>
+            <div class="image-wrap">
+                <img
+                    src="https://s3-alpha-sig.figma.com/img/14d1/2934/98018aa4d1e5f3f7aa81e2c56333e6d2?Expires=1698019200&Signature=maSzAGrKZW12Vy3f3ayaUh2B05voMnEj3r7mAxou3IjHSde4zBs2ElkrDQUT2v3lYcimuASHq72CBqtufntkYD4yQd0kg~l3~N5r5ApK9X182RKZnDYpkwScbQWLH1RhMcf7gQ-Bk0EchbQ0ZdxX3pX4SJgyKbCRc-VY2jnxA~~vtKLfx4O8cEyJUEBUMS63RkJJUav2dN97x0X-ikI0euG9BB1Q4QRZNS1URgSSLzYY75M~ljGcSEodzx4K3012PaJEceU3esn1ZIvjvYAJTiVLchxfUHnhwrPiIP9ZQZmzWcsAG6r6mAsc~j7ynIGX4IcHYs5~Vo-X~FiXdKYd7w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt=""
+                />
+
+                <div class="image-info">
+                    <h4 class="image-title">title</h4>
+                    <p class="image-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Alias est, tempore eveniet consequatur animi mollitia
+                        harum repellendus omnis in temporibus.
+                    </p>
+                </div>
+            </div>
+            <div class="image-wrap">
+                <img
+                    src="https://s3-alpha-sig.figma.com/img/14d1/2934/98018aa4d1e5f3f7aa81e2c56333e6d2?Expires=1698019200&Signature=maSzAGrKZW12Vy3f3ayaUh2B05voMnEj3r7mAxou3IjHSde4zBs2ElkrDQUT2v3lYcimuASHq72CBqtufntkYD4yQd0kg~l3~N5r5ApK9X182RKZnDYpkwScbQWLH1RhMcf7gQ-Bk0EchbQ0ZdxX3pX4SJgyKbCRc-VY2jnxA~~vtKLfx4O8cEyJUEBUMS63RkJJUav2dN97x0X-ikI0euG9BB1Q4QRZNS1URgSSLzYY75M~ljGcSEodzx4K3012PaJEceU3esn1ZIvjvYAJTiVLchxfUHnhwrPiIP9ZQZmzWcsAG6r6mAsc~j7ynIGX4IcHYs5~Vo-X~FiXdKYd7w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    alt=""
+                />
+
+                <div class="image-info">
+                    <h4 class="image-title">title</h4>
+                    <p class="image-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Alias est, tempore eveniet consequatur animi mollitia
+                        harum repellendus omnis in temporibus.
+                    </p>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="wrap">
+            <header class="header">
+                <div class="container">
+                    <div class="header__content">
+                        <a href="#" class="header-logo">logo</a>
+
+                        <div class="header__btns">
+                            <button class="header__btns-btn">Log in</button>
+                            <button class="header__btns-btn">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="hero"></section>
+
+            <section class="partners">
+                <div class="container">
+                    <h3 class="partners-title block-title">partners</h3>
+                    <ul class="partners__list">
+                        <li class="partners__item">
+                            <div class="partners__item-wrap">
+                                <img
+                                    src="https://images.pexels.com/photos/1058283/pexels-photo-1058283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="partners__item__info">
+                                <h5 class="partners__item-title">hello</h5>
+                                <p class="partners__item-text">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nemo, recusandae.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="partners__item">
+                            <div class="partners__item-wrap">
+                                <img
+                                    src="https://images.pexels.com/photos/1058283/pexels-photo-1058283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="partners__item__info">
+                                <h5 class="partners__item-title">hello</h5>
+                                <p class="partners__item-text">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nemo, recusandae.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="partners__item">
+                            <div class="partners__item-wrap">
+                                <img
+                                    src="https://images.pexels.com/photos/1058283/pexels-photo-1058283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="partners__item__info">
+                                <h5 class="partners__item-title">hello</h5>
+                                <p class="partners__item-text">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nemo, recusandae.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section></section>
+            <section></section>
+            <footer></footer>
+        </div>
+    </body>
+</html>
